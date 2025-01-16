@@ -4,7 +4,7 @@ const promClient = require("prom-client");
 const http = require("http");
 const url = require("url");
 const SunCalc = require("suncalc3");
-const { startOfTomorrow } = require("date-fns");
+const startOfTomorrow = require("date-fns");
 
 const options = require("yargs") // eslint-disable-line
   .option("latitude", {
