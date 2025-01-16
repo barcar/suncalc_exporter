@@ -9,7 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "date-fns": "^4.0.0",
+    "date-fns": "^4.1.0",
     "prom-client": "^15.0.0",
     "suncalc": "^1.9.0",
     "suncalc3": "^2.0.5",
