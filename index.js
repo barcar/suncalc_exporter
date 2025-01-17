@@ -4,7 +4,7 @@ const promClient = require("prom-client");
 const http = require("http");
 const url = require("url");
 const SunCalc = require("suncalc3");
-import { startOfTomorrow } from "date-fns";
+const dateFns = require("date-fns/startOfTomorrow");
 
 const options = require("yargs") // eslint-disable-line
   .option("latitude", {
@@ -146,8 +146,8 @@ function updateGauges(latitude, longitude) {
 //  const tomorrow_ts = (startOfTomorrow()).getTime();
 
   const now = new Date();
-  const tomorrow = startOfTomorrow();
-
+  const tomorrow = dateFns.startOfTomorrow();
+  
   // suncalc seems to be based on UTC dates
   const tomorrowTimezoneAdjusted = new Date(tomorrow.valueOf() - tomorrow.getTimezoneOffset() * 60 * 1000);
 
